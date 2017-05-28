@@ -28,6 +28,7 @@ BubbleShoot.ui = (function ($) {
                 bubbleCoords.top += ui.BUBBLE_DIMS / 2
             return bubbleCoords
         },
+        
         //pobieranie konta strzelania
         getBubbleAngle: function (bubble, e) {
             let mouseCoords = ui.getMouseCoords(e),
@@ -39,7 +40,10 @@ BubbleShoot.ui = (function ($) {
             let page = document.getElementById("page"),
                 style =  window.getComputedStyle(page),
                 styleString = style.marginLeft
-            if(browserWidth > 1127){
+            if(browserWidth > 3022){
+            var varMatginLeft = styleString.slice(0, 4)  
+            }
+            else if(browserWidth > 1127){
             var varMatginLeft = styleString.slice(0, 3)
             }
             else if(browserWidth > 1037){
@@ -48,10 +52,11 @@ BubbleShoot.ui = (function ($) {
             else{
             var varMatginLeft = styleString.slice(0, 1)
             }
-            var marginLeftt = parseInt(varMatginLeft, 10)
+            var intMarginLeft = parseInt(varMatginLeft, 10)
+            
             //obliczanie działa nie poprawnie z pzeglandarka firefox na rozdielczociach wiekrzych niz 1024px na x px
-
-    var angle = Math.atan((mouseCoords.x - bubbleCoords.left - boardLeft - marginLeftt)
+            
+    var angle = Math.atan((mouseCoords.x - bubbleCoords.left - boardLeft - intMarginLeft)
             / (bubbleCoords.top + gameCoords.top - mouseCoords.y));
             if(mouseCoords.y > bubbleCoords.top + gameCoords.top){
                 angle += Math.PI;

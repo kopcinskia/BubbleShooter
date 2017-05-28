@@ -18,7 +18,6 @@ body
 {
 	position: relative;
 	z-index: 10;
-	left: 0;
 	top: 0;
 	width: 1024px;
 	height: 40px;
@@ -30,16 +29,36 @@ body
 	font-size: 24px;
 	line-height: 40px;
 	float: left;
-	margin-left:20px;
+	margin-left:5px;
 	width: 250px;
 }
 .top_bar_box div
 {
 	float: left;
-	margin-right: 20px;
+    margin-right:20px;
 }
 .top_bar_box #top_score_label, #high_score{
 	display: inline-table;
+}
+.copyright {
+    text-align: center;
+    background-color: #079;
+}
+.copyright p {
+    padding-bottom: 15px;
+    font-size: 22px;
+    color: #FCF7EE;
+    margin: 0;
+}
+.copyright a {
+    color: #FCF7EE;
+}
+.top_bar_box a{
+}
+.top_bar_box img {
+    padding-top: 7px;
+    padding-left: 14px;
+    width: 140px;
 }
 #game
 {
@@ -66,7 +85,7 @@ body
     top: -25px;
 	left: 0;
 	width: 1024px;
-	height: 40px;
+	height: 35px;
 	background-color: #169;
 }
 .dialog
@@ -94,7 +113,7 @@ body
 {
 	position: absolute;
 	left: 112px;
-	top: 245px;
+	top: 295px;
 	height: auto;
 	width: 200px;
 	background-color: #f00;
@@ -158,3 +177,5 @@ ease-in-out;
 	font-size: 36px;
 	color: #fff;
 }
+
+

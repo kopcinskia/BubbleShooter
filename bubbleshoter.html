@@ -1,26 +1,24 @@
 <!doctype html>
 <html lang="eng">
-
 <head>
     <meta charset="UTF-8">
     <title>BubbleShoot</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/game.css">
-
-    <script src="./js/modernizr.js"></script>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/game.min.css">
+    <script src="./js/modernizr.min.js"></script>
     <script>
         Modernizr.load([
             {
                 load: "js/jquery-1.11.2.min.js"
 			},
-			"js/ui.js",
-			"js/bubble.js",
-			"js/board.js",
-			"js/collision-detector.js",
-			"js/jquery.kaboom.js",
-            "js/sounds.js",
+			"js/ui.min.js",
+			"js/bubble.min.js",
+			"js/board.min.js",
+			"js/collision-detector.min.js",
+			"js/jquery.kaboom.min.js",
+            "js/sounds.min.js",
             {
-                load: "js/game.js",
+                load: "js/game.min.js",
                 complete: function () {
                     $(function () {
                         var game = new BubbleShoot.Game()
@@ -30,11 +28,14 @@
 	   }])
     </script>
 </head>
-
 <body>
     <div id="page">
-
         <div id="top_bar">
+           <div class="top_bar_box">
+                <a href="../portfolio/index.html">
+                    <img src="../portfolio/images/logoAK.png" alt="logo">
+                </a>
+            </div>
             <div id="top_level_box" class="top_bar_box">
                 <div id="top_level_label">Level:</div>
                 <div id="level">1</div>
@@ -48,17 +49,15 @@
                 <div id="high_score">0</div>
             </div>
         </div>
-
         <div id="game">
-            <div id="board">
-                
-            </div>
+            <div id="board"></div>
         </div>
-
         <div id="footer_bar">
             <div id="bubbles_remaining"></div>
+            <div class="copyright">
+                <p>Copyright 2017 &copy; @Kopcińskia</p>
+            </div>
         </div>
-
         <div id="start_game" class="dialog">
             <div id="start_game_message">
                 <h2>Play</h2>
@@ -67,7 +66,6 @@
                 New Game
             </button>
         </div>
-
         <div id="end_game" class="dialog">
             <div id="end_game_message">
                 <h2>Level</h2>
@@ -84,8 +82,6 @@
                 <span class="level_failed">New Game</span>
             </div>
         </div>
-
     </div>
 </body>
-
 </html>
